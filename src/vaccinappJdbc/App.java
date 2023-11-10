@@ -49,13 +49,18 @@ public class App {
 				String name = "ab";
 				do {
 
+					if (scan.hasNextLine()) { // pra pegar o enter do buffer
+						scan.nextLine();
+						
+					}
+					
 					System.out.println("Digite seu nome: ");
 					name = scan.nextLine();
 
 					if (scan.hasNextLine()) { // pra pegar o enter do buffer
 						scan.nextLine();
+						
 					}
-
 					if (userManager.isValidName(name)) {
 						System.out.println("Nome inválido. Tente novamente.");
 					}
@@ -94,8 +99,6 @@ public class App {
 					System.out.println(" ");
 					System.out.println("Ocorreu um erro! Não foi possível realizar o agendamento!");
 					System.out.println(" ");
-					System.out.println(
-							"nome: " + name + "Vacina: " + vaccine + "Dia: " + dia1 + "mes:" + mes1 + "ano: " + ano1);
 				}
 
 				break;
@@ -104,6 +107,11 @@ public class App {
 
 				String name2 = "ab";
 				do {
+					
+					if (scan.hasNextLine()) { // pra pegar o enter do buffer
+						scan.nextLine();
+						
+					}
 
 					System.out.println("Digite seu nome: ");
 					name2 = scan.nextLine();
@@ -148,8 +156,6 @@ public class App {
 							+ mes2 + "/" + ano2 + " realizado com sucesso!");
 				} else {
 					System.out.println("Ocorreu um erro! Não foi possível realizar o agendamento!");
-					System.out.println(
-							"nome: " + name2 + "exam: " + exam + "Dia: " + dia2 + "mes:" + mes2 + "ano: " + ano2);
 
 				}
 				break;
